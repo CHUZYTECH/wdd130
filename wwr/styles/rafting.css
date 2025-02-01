@@ -1,134 +1,219 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Navigation Styles */
-
-nav a {
-  color:#A8201A;
-  text-decoration: none;
-  
-}
-
-nav img {
-  height: 100%;
-  max-height: 100%;
-  width: auto;
-}
-
-/* Playfair Display (Headings) & Roboto */
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', serif;
-}
-
-/* Poppins & Inter (Body) */
-body {
-  font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* Root Variables for Colors */
 :root {
-  --primary-color: #143642;
-  --secondary-color: #A8201A;
-  --accent1-color: #0F8B8D;
-  --accent2-color: #EC9A29;
+    --primary-color: #0F8B8D;
+    --secondary-color: #143642;
+    --accent1-color: #A8201A;
+    --accent2-color: #EC9A29;
+}
+
+header {
+    margin: 1rem auto;
+    display: grid;
+    grid-template-columns: 120px 1fr 1fr;
+    align-items: center;
+    border-bottom: 1px solid #143642;
+    max-width: 1000px;
+}
+
+.logo img {
+    margin: 0 0.25rem 0 1rem;
+    width: 64px;
+    height: auto;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #0F8B8D;
+}
+
+.navigation {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navigation li {
+    flex: 1 1 auto;
+}
+
+.navigation a {
+    display: block;
+    color: #0F8B8D;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+
+.navigation a:hover {
+    color: #A8201A;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+
+/* Playfair Display (Headings) & Roboto */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Poppins & Inter (Body) */
+body {
+    font-family: 'Inter', sans-serif;
 }
 
 .hero {
-  position: relative;
-  text-align: center;
-  width: 100%;
-  height: auto;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: auto;
 }
 
 .hero img {
-  width: 100%;
-  height: auto;
-  display: block;
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .hero h1 {
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: grid;
-  flex-wrap: wrap;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #ffffff;
-  font-size: 2.5rem;
-  margin: 0;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 2rem;
+    margin: 0;
 }
 
 .hero .happy {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 1000px;
-  width: 100%; 
-  box-sizing: border-box;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 1000px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .hero .happy img {
-  float: right;
-  margin-left: 10px;
-  width: 200px;
-  height: auto;
+    float: right;
+    margin-left: 10px;
+    width: 150px;
+    height: auto;
+    border-radius: 5%;
 }
 
 
-/* Style for the history section */
 .history-section {
-  /* display: grid; */
-  color: #A8201A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #0F8B8D;
+    color: #ffffff;
 }
 
-
-/* Style for the heading */
-.history-content h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color:#A8201A;
+.history-content {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    gap: 20px;
+    max-width: 1000px;
+    text-align: justify;
 }
 
-/* Style for the paragraph */
-.history-content p {
-  font-size: 1.2rem;
-  line-height: 1.6;
+h2 {
+    grid-column: span 3;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.adventure-section h2 {
-  font-size: 2rem;
-  margin-bottom: 30px;
-  color: #143642;
+.history-content p:first-of-type {
+    text-align: justify;
 }
 
-/* Image Gallery Styling */
-.image-gallery {
-  display: grid;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+.history-content img {
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    margin: 0 auto;
+}
+
+.history-content p:last-of-type {
+    text-align: justify;
+}
+
+.adventure-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #EC9A29;
+    color: #143642;
+}
+
+.adventures-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.adventures-section figure {
+    text-align: center;
+}
+
+.adventures-section img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 5px;
+}
+
+.adventures-section figcaption {
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #143642;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    flex-wrap: wrap;
+    
 }
 
 .social-links {
-  display: flex;
-  gap: 15px;
+    display: flex;
+    gap: 20px;
+    margin-left: 100px;
 }
 
 .social-links a {
-  color: #143642;
-  font-size: 1.5rem;
-  transition: color 0.3s ease;
-  text-decoration: none;
+    color: #ffffff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+    text-decoration: none;
 }
 
-
-
+.social-links a:hover {
+    color: var(--accent1-color);
+}
